@@ -1,0 +1,14 @@
+.event {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.event-name {
+    text-decoration: underline;
+}
+
+.event-dates {
+    color: brown;
+}

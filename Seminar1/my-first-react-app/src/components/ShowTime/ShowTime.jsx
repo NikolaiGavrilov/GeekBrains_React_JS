@@ -1,0 +1,1 @@
+export const ShowTime = () => (<span>Время сейчас - {new Date().toLocaleTimeString()}</span>)
