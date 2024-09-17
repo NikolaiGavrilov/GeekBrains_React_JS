@@ -1,0 +1,7 @@
+.temperature-converter {
+        margin: 5%;
+        padding-bottom: 50px;
+        max-width: 90%;
+        background-color: white;
+        border: 3px solid red;
+}
