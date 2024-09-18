@@ -1,0 +1,7 @@
+.links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+}

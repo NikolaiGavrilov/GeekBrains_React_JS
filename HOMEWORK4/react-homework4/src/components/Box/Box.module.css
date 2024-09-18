@@ -1,0 +1,9 @@
+.container {
+    border: 3px solid cyan;
+    background-color: aliceblue;
+    box-shadow: 10px 5px 5px rgb(76, 122, 163);
+    max-width: 80%;
+    margin: 50px 10%;
+    padding: 30px;
+}
+
