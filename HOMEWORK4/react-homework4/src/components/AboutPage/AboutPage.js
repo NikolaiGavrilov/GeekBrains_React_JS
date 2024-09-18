@@ -30,7 +30,7 @@ function AboutPage() {
                 <Link to='/'>Главная</Link>
                 <Link to='/about'>О нас</Link>
             </nav>
-            <h1>О нас</h1>
+            <h1>Контакты:</h1>
             <ul>
                 {contactInfo.map(renderElem)}
             </ul>
