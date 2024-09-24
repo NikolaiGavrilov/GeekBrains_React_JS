@@ -1,5 +1,5 @@
 import './App.css';
-import ThemeSwitcher from './components/ThemeSwitcher';
+import ThemeSwitcher from './components/ThemeSwitcher/ThemeSwitcher';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import {
