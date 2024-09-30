@@ -1,0 +1,56 @@
+.heading_before_catalogue { 
+    margin-left: 44.3125%;
+    color: #222222;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.description_before_catalogue {
+    margin-left: 39.5%;
+    margin-bottom: 48px;
+    color: #9F9F9F;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.catalogue_block{
+    max-width: 1140px;
+}
+
+.catalogue {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.catalogue_button {
+    margin-top:58px;
+    margin-bottom: 50px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F26376;
+    border-color: #F26376;
+    background-color: #FFFFFF;
+    width: 212px;
+    height: 48px;
+    text-align: center;
+}
+
+.catalogue_button:hover{
+    color: #FFFFFF;
+    background-color: #F26376;
+}
