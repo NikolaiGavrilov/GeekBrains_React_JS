@@ -1,11 +1,108 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Header/Header'
 import CatalogNav from '../CatalogNav/CatalogNav'
 import './CatalogPage.scss'
 import Footer from '../Footer/Footer'
-import GoodsListCatalog from '../GoodsListCatalog/GoodsListCatalog'
+// import GoodsListCatalog from '../GoodsListCatalog/GoodsListCatalog'
+import GoodItem from '../GoodItem/GoodItem'
 
-const CatalogPage = () => {
+const CatalogPage = (goods) => {
+
+    const goodsData = [
+        { id: 1,
+        imgSrc: 'img/Rectangle 1.jpg', 
+        altDescr: 'товар1',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Blue',
+        size: 'XL',
+        price: 134,}, 
+        { id: 2,
+            imgSrc: 'img/Rectangle 8.png', 
+        altDescr: 'товар8',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Red',
+        size: 'L',
+        price: 45,}, 
+        { id: 3,
+            imgSrc: 'img/Rectangle 3.png', 
+        altDescr: 'товар3',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Blue',
+        size: 'L',
+        price: 76,}, 
+        { id: 4,
+            imgSrc: 'img/Rectangle 4.png', 
+        altDescr: 'товар4',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Blue',
+        size: 'XS',
+        price: 66,}, 
+        { id: 5,
+            imgSrc: 'img/Rectangle 9.png', 
+        altDescr: 'товар9',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'White',
+        size: 'XXL',
+        price: 45,}, 
+        { id: 6,
+            imgSrc: 'img/Rectangle 11.png', 
+        altDescr: 'товар11',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'White',
+        size: 'M',
+        price: 123,}, 
+        { id: 7,
+            imgSrc: 'img/Rectangle 7.png', 
+        altDescr: 'товар7',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'White',
+        size: 'M',
+        price: 100,}, 
+        { id: 8,
+            imgSrc: 'img/Rectangle 10.png', 
+        altDescr: 'товар10',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Black',
+        size: 'XL',
+        price: 77,}, 
+        { id: 9,
+            imgSrc: 'img/Rectangle 12.png', 
+        altDescr: 'товар12',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Green',
+        size: 'S',
+        price: 52,}, 
+    ]
+
+    const [selectedColors, setSelectedColors] = useState([]);
+    const [selectedSizes, setSelectedSizes] = useState([]);
+
+    const handleSizeChoice = (size) => {
+        setSelectedSizes(prev => 
+            prev.includes(size) ? prev.filter(s => s !== size) : [...prev, size]
+        );
+    };
+
+    const handleColorChoice = (color) => {
+        setSelectedColors(prev => 
+            prev.includes(color) ? prev.filter(c => c !== color) : [...prev, color]
+        );
+    };
+
+    const filteredGoods = goodsData.filter(product => 
+        (selectedColors.length === 0 || selectedColors.includes(product.color)) &&
+        (selectedSizes.length === 0 || selectedSizes.includes(product.size))
+    );
+
   return (
     <>
     <Header />
@@ -70,49 +167,37 @@ const CatalogPage = () => {
                 </div>
                 <div className="prod-catalogue__right">
                     <div className="prod-catalogue__parameters">
-                        <div className="prod-catalogue__trending">
-                            <h2 className="prod-catalogue__heading">Trending now</h2>
-                            <div className="prod-catalogue__text-flex">
-                                <a href="#" className="prod-catalogue__text prod-catalogue__text-link">Bohemian</a>
-                                <a href="#" className="prod-catalogue__text prod-catalogue__text-link">Floral</a>
-                                <a href="#" className="prod-catalogue__text prod-catalogue__text-link">Lace</a>
-                                <a href="#" className="prod-catalogue__text prod-catalogue__text-link">Floral</a>
-                                <a href="#" className="prod-catalogue__text prod-catalogue__text-link">Lace</a>
-                                <a href="#" className="prod-catalogue__text prod-catalogue__text-link">Bohemian</a>
-                            </div>
-                        </div>
-                        <div className="prod-catalogue__size">
-                            <h2 className="prod-catalogue__heading">Size</h2>
-                            <div className="prod-catalogue__size-flex">
-                                <div className="prod-catalogue__checkbox-flex">
-                                    <input name="Size" type="checkbox" />
-                                    <label for="Size" className="prod-catalogue__checkbox">XXS</label>
-                                </div>
-                                <div className="prod-catalogue__checkbox-flex">
-                                    <input name="Size" type="checkbox" />
-                                    <label for="Size" className="prod-catalogue__checkbox">XS</label>
-                                </div>
-                                <div className="prod-catalogue__checkbox-flex">
-                                    <input name="Size" type="checkbox" />
-                                    <label for="Size" className="prod-catalogue__checkbox">S</label>
-                                </div>
-                                <div className="prod-catalogue__checkbox-flex">
-                                    <input name="Size" type="checkbox" />
-                                    <label for="Size" className="prod-catalogue__checkbox">M</label>
-                                </div>
-                                <div className="prod-catalogue__checkbox-flex">
-                                    <input name="Size" type="checkbox" />
-                                    <label for="Size" className="prod-catalogue__checkbox">L</label>
-                                </div>
-                                <div className="prod-catalogue__checkbox-flex">
-                                    <input name="Size" type="checkbox" />
-                                    <label for="Size" className="prod-catalogue__checkbox">XL</label>
-                                </div>
-                                <div className="prod-catalogue__checkbox-flex">
-                                    <input name="Size" type="checkbox" />
-                                    <label for="Size" className="prod-catalogue__checkbox">XXL</label>
+                    <div className="prod-catalogue__trending">
+                                <h2 className="prod-catalogue__heading">Color</h2>
+                                <div className="prod-catalogue__text-flex">
+                                    {['Black', 'Blue', 'Green', 'Red', 'White'].map(color => (
+                                        <a 
+                                            href="#" 
+                                            className={`prod-catalogue__text prod-catalogue__text-link ${selectedColors.includes(color) ? 'active' : ''}`} 
+                                            onClick={(e) => { e.preventDefault(); handleColorChoice(color); }}
+                                            key={color}
+                                        >
+                                            {color}
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
+                            <div className="prod-catalogue__size">
+                                <h2 className="prod-catalogue__heading">Size</h2>
+                                <div className="prod-catalogue__size-flex">
+                                    {['XS', 'S', 'M', 'L', 'XL', 'XXL'].map(size => (
+                                        <div className="prod-catalogue__checkbox-flex" key={size}>
+                                            <input 
+                                                name="Size" 
+                                                type="checkbox" 
+                                                checked={selectedSizes.includes(size)}
+                                                onChange={() => handleSizeChoice(size)} 
+                                            />
+                                            <label className="prod-catalogue__checkbox">{size}</label>
+                                        </div>
+                                    ))}
+                                </div>
+                            
                         </div>
                         <div className="prod-catalogue__price">
                             <h2 className="prod-catalogue__heading">Price</h2>
@@ -147,7 +232,9 @@ const CatalogPage = () => {
                             </div>
                         </div>
                     </div>
-                    <GoodsListCatalog />
+                    <div className="prod-catalogue__items-box">
+        {filteredGoods.map(good => <GoodItem id={good.id} imgSrc={good.imgSrc} altDescr={good.altDescr} heading={good.heading} description={good.description} color={good.color} size={good.size} price={good.price}/>)}
+        </div>
                     <nav className="prod-catalogue__under-items">
                         <div className="prod-catalogue__pages-select">
                             <a href="#" className="prod-catalogue__pages-select__link"><i className="fa fa-angle-left"></i></a>

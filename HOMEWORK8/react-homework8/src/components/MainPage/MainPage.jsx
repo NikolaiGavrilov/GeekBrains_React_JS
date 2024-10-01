@@ -44,12 +44,12 @@ const MainPage = () => {
         <h2 className="heading_before_catalogue">Fetured Items</h2>
         <p className="description_before_catalogue">Shop for items based on what we featured in this week</p>
         <div className="catalogue">
-        <GoodItem id='1' imgSrc='img/Rectangle 1.jpg' altDescr='товар1' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Red' size='XL' price='134'/>
-        <GoodItem id='10' imgSrc='img/Rectangle 2.png' altDescr='товар10' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Green' size='XXL' price='200'/>
-        <GoodItem id='3' imgSrc='img/Rectangle 3.png' altDescr='товар3' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Green' size='L' price='76'/>
-        <GoodItem id='4' imgSrc='img/Rectangle 4.png' altDescr='товар4' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Red' size='XS' price='66'/>
+        <GoodItem id='1' imgSrc='img/Rectangle 1.jpg' altDescr='товар1' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Blue' size='XL' price='134'/>
+        <GoodItem id='10' imgSrc='img/Rectangle 2.png' altDescr='товар10' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Black' size='XXL' price='200'/>
+        <GoodItem id='3' imgSrc='img/Rectangle 3.png' altDescr='товар3' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Blue' size='L' price='76'/>
+        <GoodItem id='4' imgSrc='img/Rectangle 4.png' altDescr='товар4' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Blue' size='XS' price='66'/>
         <GoodItem id='11' imgSrc='img/Rectangle 5.png' altDescr='товар11' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Blue' size='XS' price='85'/>
-        <GoodItem id='12' imgSrc='img/Rectangle 6.png' altDescr='товар12' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Black' size='L' price='109'/>
+        <GoodItem id='12' imgSrc='img/Rectangle 6.png' altDescr='товар12' heading="ELLERY X M'O CAPSULE" description='Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.' color='Green' size='L' price='109'/>
         </div>
         <Link to="/catalogue"><button className="catalogue_button">Browse All Product</button></Link>
         </section>

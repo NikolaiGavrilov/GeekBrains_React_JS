@@ -66,9 +66,9 @@ const ProductPage = () => {
             <div class="container">
                 <div class="sing-page__items_title">you may like also</div>
                 <div class="sing-page__items_box">
-                <GoodItem imgSrc="img/Rectangle 4.png" altDescr="товар4" heading="ELLERY X M'O CAPSULE" description="Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi." price="$52"/>    
-                <GoodItem imgSrc="img/Rectangle 3.png" altDescr="товар3" heading="ELLERY X M'O CAPSULE" description="Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi." price="$52"/>    
-                <GoodItem imgSrc="img/Rectangle 6.png" altDescr="товар6" heading="ELLERY X M'O CAPSULE" description="Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi." price="$52"/>    
+                <GoodItem id="4" imgSrc="img/Rectangle 4.png" altDescr="товар4" heading="ELLERY X M'O CAPSULE" description="Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi." price="66"/>    
+                <GoodItem id="3" imgSrc="img/Rectangle 3.png" altDescr="товар3" heading="ELLERY X M'O CAPSULE" description="Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi." price="76"/>    
+                <GoodItem id="12" imgSrc="img/Rectangle 6.png" altDescr="товар6" heading="ELLERY X M'O CAPSULE" description="Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi." price="109"/>    
                 </div>
                 </div>
             </div>
