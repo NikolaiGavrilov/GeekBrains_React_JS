@@ -1,9 +1,10 @@
 import React from 'react'
 import './Footer.scss'
 
-const Footer = () => {
+const Footer = ({isFullVersion}) => {
   return (
     <footer>
+      { isFullVersion && (
       <section className="upper_footer_part center">
         <div className="upper_footer_figures">
           <figure className="upper_footer_figure_element">
@@ -28,7 +29,7 @@ const Footer = () => {
             </p>
           </figure>
         </div>
-      </section>
+      </section>)}
       <section className="central_footer_part">
         <div className="central_footer_part_image_bg"></div>
         <div className="central_footer_content center">
