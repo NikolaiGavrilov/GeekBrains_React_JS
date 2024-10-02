@@ -4,8 +4,29 @@ import Footer from '../Footer/Footer';
 import CatalogNav from '../CatalogNav/CatalogNav';
 import GoodItem from '../GoodItem/GoodItem';
 import './ProductPage.scss';
+import { useCart } from '../../store/store';
+import { Link } from 'react-router-dom';
 
 const ProductPage = () => {
+    const { dispatch } = useCart();
+
+    //В корзину при нажатии на кнопку на этой странице я считаю логичным добавлять товар 
+    // с именно этой картинкой и данными, так что записываю ее в соответствующий объект
+    const handleAddToCart = () => {
+        dispatch({
+            type: 'ADD_ITEM',
+            payload: { id: 24,
+                img: 'img/Rectangle 24.png', 
+            altDescr: 'товар24',
+            name: "ELLERY X M'O CAPSULE",
+            description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+            color: 'White',
+            size: 'M',
+            price: 561,
+        quantity: 1},
+        });
+    };
+
   return (
     <>
     <Header />
@@ -40,25 +61,25 @@ const ProductPage = () => {
                         <h2 class="sing-page__info__production-category__value">CHOOSE COLOR</h2>
                         <select class="sing-page__info__input_select" name="" id="">
                             <option class="sing-page__info__input_select-value" selected="selected">
-                                <span>Red</span>
+                                <span>White</span>
                             </option>
                         </select>
                     </div>
                     <div>
                         <h2 class="sing-page__info__production-category__value">CHOOSE COLOR</h2>
                         <select class="sing-page__info__input_select" name="" id="">
-                            <option class="sing-page__info__input_select-value" selected="selected">XXL</option>
+                            <option class="sing-page__info__input_select-value" selected="selected">M</option>
                         </select>
                     </div>
                     <div>
                         <h2 class="sing-page__info__production-category__value">QUANTITY</h2>
-                        <input class="sing-page__info__input" type="number" value="2" min="1" />
+                        <input class="sing-page__info__input" type="number" value="1" min="1" />
                     </div>
                 </div>
 
-                <a href="shopping_cart.html"><button class="sing-page__info__button">
+                <Link><button class="sing-page__info__button" onClick={handleAddToCart}>
                         <img class="sing-page__info__button_img" src="img/addCart.png" alt="" />
-                        <span class="sing-page__info__button_add-inscription">Add to Cart</span></button></a>
+                        <span class="sing-page__info__button_add-inscription" >Add to Cart</span></button></Link>
             </div>
         </div>
 

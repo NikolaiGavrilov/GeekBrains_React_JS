@@ -3,11 +3,11 @@ import Header from '../Header/Header';
 import CatalogNav from '../CatalogNav/CatalogNav';
 import './CatalogPage.scss';
 import Footer from '../Footer/Footer';
-// import GoodsListCatalog from '../GoodsListCatalog/GoodsListCatalog';
 import GoodItem from '../GoodItem/GoodItem';
 
 const CatalogPage = (goods) => {
 
+    //Это данные обо всех товарах. Добавил туда несколько собственных, чтоб было побольше, и можно было во всей красе попробовать пагинацию
     const goodsData = [
         { id: 1,
         imgSrc: 'img/Rectangle 1.jpg', 
@@ -81,27 +81,206 @@ const CatalogPage = (goods) => {
         color: 'Green',
         size: 'S',
         price: 52,}, 
+        { id: 10,
+            imgSrc: 'img/Rectangle 2.png', 
+        altDescr: 'товар10',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Black',
+        size: 'XXL',
+        price: 200,}, 
+        { id: 11,
+            imgSrc: 'img/Rectangle 5.png', 
+        altDescr: 'товар11',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Blue',
+        size: 'S',
+        price: 85,}, 
+        { id: 12,
+            imgSrc: 'img/Rectangle 6.png', 
+        altDescr: 'товар12',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Green',
+        size: 'L',
+        price: 109,}, 
+        { id: 13,
+            imgSrc: 'img/Rectangle 13.png', 
+        altDescr: 'товар13',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Green',
+        size: 'M',
+        price: 155,}, 
+        { id: 14,
+            imgSrc: 'img/Rectangle 14.png', 
+        altDescr: 'товар14',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Green',
+        size: 'M',
+        price: 98,}, 
+        { id: 15,
+            imgSrc: 'img/Rectangle 15.png', 
+        altDescr: 'товар15',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Green',
+        size: 'S',
+        price: 71,},
+        { id: 16,
+            imgSrc: 'img/Rectangle 16.png', 
+        altDescr: 'товар16',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Black',
+        size: 'L',
+        price: 13,},
+        { id: 17,
+            imgSrc: 'img/Rectangle 17.png', 
+        altDescr: 'товар17',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Red',
+        size: 'XL',
+        price: 138,},
+        { id: 18,
+            imgSrc: 'img/Rectangle 18.png', 
+        altDescr: 'товар18',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Blue',
+        size: 'M',
+        price: 97,},
+        { id: 19,
+            imgSrc: 'img/Rectangle 19.png', 
+        altDescr: 'товар19',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Blue',
+        size: 'L',
+        price: 84,},
+        { id: 20,
+            imgSrc: 'img/Rectangle 20.png', 
+        altDescr: 'товар20',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Black',
+        size: 'XL',
+        price: 110,},
+        { id: 21,
+            imgSrc: 'img/Rectangle 21.png', 
+        altDescr: 'товар21',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'White',
+        size: 'XXL',
+        price: 1,},
+        { id: 22,
+            imgSrc: 'img/Rectangle 22.png', 
+        altDescr: 'товар22',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Black',
+        size: 'L',
+        price: 105,},
+        { id: 23,
+            imgSrc: 'img/Rectangle 23.png', 
+        altDescr: 'товар23',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Red',
+        size: 'M',
+        price: 113,},
+        { id: 24,
+            imgSrc: 'img/Rectangle 24.png', 
+        altDescr: 'товар24',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'White',
+        size: 'M',
+        price: 561,},
+        { id: 25,
+            imgSrc: 'img/Rectangle 25.png', 
+        altDescr: 'товар25',
+        heading: "ELLERY X M'O CAPSULE",
+        description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.', 
+        color: 'Blue',
+        size: 'S',
+        price: 68,},
     ]
 
-    const [selectedColors, setSelectedColors] = useState([]);
+    //Состояние выбранного цвета (на одежде)
+    const [selectedColor, setSelectedColor] = useState('');
+    //Состояние выбранных размеров
     const [selectedSizes, setSelectedSizes] = useState([]);
+    //Состояние номера текущей страницы (для пагинации по каталогу)
+    const [currentPage, setCurrentPage] = useState(1);
+    //Состояние кол-ва отображаемых товаров на странице каталога
+    const [itemsPerPage, setItemsPerPage] = useState(9);
 
+    //Хэндлер выбора размеров одежды
     const handleSizeChoice = (size) => {
+        setCurrentPage(1);
         setSelectedSizes(prev => 
             prev.includes(size) ? prev.filter(s => s !== size) : [...prev, size]
         );
     };
 
+    //Хэндлер выбора цветов товаров
     const handleColorChoice = (color) => {
-        setSelectedColors(prev => 
-            prev.includes(color) ? prev.filter(c => c !== color) : [...prev, color]
-        );
+        setCurrentPage(1);
+        color === 'All' ? setSelectedColor(''): setSelectedColor(color);
     };
 
+    //Фильтрация имеющихся у нас товаров по цветам и размерам
     const filteredGoods = goodsData.filter(product => 
-        (selectedColors.length === 0 || selectedColors.includes(product.color)) &&
+        (selectedColor === '' || product.color === selectedColor) && // Проверка на совпадение цвета
         (selectedSizes.length === 0 || selectedSizes.includes(product.size))
     );
+
+    //Хэндлер, устанавливающий кол-во отображаемых товаров на странице. Привязан к селекту Show на странице каталога.
+    //Можно выбрать 9 или All Goods. Во что это выливается - см. следующую функцию.
+    const handleItemsPerPage = (e) => {
+        setItemsPerPage(e.target.value);
+    };
+
+    //Функция, отвечающая за показ товаров на странице. Если выбрано показывать по 9 товаров, 
+    // то возможно переключение между страницами товаров (реализована пагинация, пускай, возможно, и не в лучшем ее виде). 
+    // Если выбрано All goods, то страница только одна, 
+    // и на ней будут показаны все товары
+    const showGoodsOnPage = (pageNum, itemsPerPage) => {
+        let indexOfLastGood = pageNum*itemsPerPage;
+        const indexOfFirstGood = indexOfLastGood-itemsPerPage;
+        
+        if (itemsPerPage === 'All goods') {
+            return filteredGoods.map(good => <GoodItem id={good.id} imgSrc={good.imgSrc} altDescr={good.altDescr} heading={good.heading} description={good.description} color={good.color} size={good.size} price={good.price}/>)
+        }
+
+        const goodsOnThisPage = [];
+        if (indexOfLastGood > filteredGoods.length) {
+            indexOfLastGood = filteredGoods.length;
+        }
+        for (let i = indexOfFirstGood; i < indexOfLastGood; i++) {
+            goodsOnThisPage.push(
+                <GoodItem 
+                    key={filteredGoods[i].id} 
+                    id={filteredGoods[i].id} 
+                    imgSrc={filteredGoods[i].imgSrc} 
+                    altDescr={filteredGoods[i].altDescr} 
+                    heading={filteredGoods[i].heading} 
+                    description={filteredGoods[i].description} 
+                    color={filteredGoods[i].color} 
+                    size={filteredGoods[i].size} 
+                    price={filteredGoods[i].price}
+                />
+            );
+        }
+        return goodsOnThisPage;
+        
+    }
+   
 
   return (
     <>
@@ -170,10 +349,10 @@ const CatalogPage = (goods) => {
                     <div className="prod-catalogue__trending">
                                 <h2 className="prod-catalogue__heading">Color</h2>
                                 <div className="prod-catalogue__text-flex">
-                                    {['Black', 'Blue', 'Green', 'Red', 'White'].map(color => (
+                                    {['Black', 'Blue', 'Green', 'Red', 'White', 'All'].map(color => (
                                         <a 
                                             href="#" 
-                                            className={`prod-catalogue__text prod-catalogue__text-link ${selectedColors.includes(color) ? 'active' : ''}`} 
+                                            className={`prod-catalogue__text prod-catalogue__text-link ${selectedColor === color ? 'active' : ''}`} 
                                             onClick={(e) => { e.preventDefault(); handleColorChoice(color); }}
                                             key={color}
                                         >
@@ -226,27 +405,28 @@ const CatalogPage = (goods) => {
                         </div>
                         <div className="prod-catalogue__sort">
                             <div><span className="prod-catalogue__select-text">Show</span>
-                                <select className="prod-catalogue__select" name="" id="">
-                                    <option selected="selected">09</option>
+                                <select className="prod-catalogue__select" name="" id="" onInput={handleItemsPerPage}>
+                                    <option selected="selected">9</option>
+                                    <option>All goods</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div className="prod-catalogue__items-box">
+                    {/* <div className="prod-catalogue__items-box">
         {filteredGoods.map(good => <GoodItem id={good.id} imgSrc={good.imgSrc} altDescr={good.altDescr} heading={good.heading} description={good.description} color={good.color} size={good.size} price={good.price}/>)}
+        </div> */}
+        <div className="prod-catalogue__items-box">
+        {showGoodsOnPage(currentPage,itemsPerPage)}
         </div>
                     <nav className="prod-catalogue__under-items">
-                        <div className="prod-catalogue__pages-select">
+                        {itemsPerPage !== 'All goods' && selectedColor === '' ? <div className="prod-catalogue__pages-select">
                             <a href="#" className="prod-catalogue__pages-select__link"><i className="fa fa-angle-left"></i></a>
-                            <a href="#" className="prod-catalogue__pages-select__link">1</a>
-                            <a href="#" className="prod-catalogue__pages-select__link">2</a>
-                            <a href="#" className="prod-catalogue__pages-select__link">3</a>
-                            <a href="#" className="prod-catalogue__pages-select__link">4</a>
-                            <a href="#" className="prod-catalogue__pages-select__link">5</a>
-                            <a href="#" className="prod-catalogue__pages-select__link">6.....20</a>
+                            <a href="#" className="prod-catalogue__pages-select__link" onClick={() => setCurrentPage(1)}>1</a>
+                            <a href="#" className="prod-catalogue__pages-select__link" onClick={() => setCurrentPage(2)}>2</a>
+                            <a href="#" className="prod-catalogue__pages-select__link" onClick={() => setCurrentPage(3)}>3</a>
                             <a href="#" className="prod-catalogue__pages-select__link"><i className="fa fa-angle-right"></i></a>
-                        </div>
-                        <button className="prod-catalogue__button">View All</button>
+                        </div> : <a href="#" className="prod-catalogue__pages-select__link" onClick={() => setCurrentPage(1)}>1</a>}
+                        <button className="prod-catalogue__button" onClick={() => setItemsPerPage("All goods")}>View All</button>
                     </nav>
                 </div>
             </div>
@@ -259,3 +439,4 @@ const CatalogPage = (goods) => {
 }
 
 export default CatalogPage;
+

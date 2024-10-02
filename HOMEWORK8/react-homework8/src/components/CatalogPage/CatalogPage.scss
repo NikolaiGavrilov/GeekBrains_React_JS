@@ -86,6 +86,10 @@
   .prod-catalogue__text-link:hover {
     color: #f16d7f;
   }
+
+  .prod-catalogue__text-link:focus {
+    color: #f16d7f;
+  }
   .prod-catalogue__text:first-child {
     padding-left: 0;
   }
