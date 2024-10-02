@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CartGood from '../CartGood/CartGood';
 import { useCart } from '../../store/store';
-import CatalogNav from '../CatalogNav/CatalogNav';
+// import CatalogNav from '../CatalogNav/CatalogNav';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './CartPage.scss';

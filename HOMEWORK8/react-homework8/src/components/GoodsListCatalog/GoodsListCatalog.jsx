@@ -1,6 +1,6 @@
-import React from 'react'
-import './GoodsListCatalog.scss'
-import GoodItem from '../GoodItem/GoodItem'
+import React from 'react';
+import './GoodsListCatalog.scss';
+import GoodItem from '../GoodItem/GoodItem';
 
 const GoodsListCatalog = ({ children}) => {
 
@@ -88,4 +88,4 @@ const GoodsListCatalog = ({ children}) => {
   )
 }
 
-export default GoodsListCatalog
+export default GoodsListCatalog;

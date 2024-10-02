@@ -1,9 +1,9 @@
-import React from 'react'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-import CatalogNav from '../CatalogNav/CatalogNav'
-import GoodItem from '../GoodItem/GoodItem'
-import './ProductPage.scss'
+import React from 'react';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import CatalogNav from '../CatalogNav/CatalogNav';
+import GoodItem from '../GoodItem/GoodItem';
+import './ProductPage.scss';
 
 const ProductPage = () => {
   return (
@@ -79,4 +79,4 @@ const ProductPage = () => {
   )
 }
 
-export default ProductPage
+export default ProductPage;

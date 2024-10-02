@@ -1,5 +1,5 @@
-import React from 'react'
-import './Footer.scss'
+import React from 'react';
+import './Footer.scss';
 
 const Footer = ({isFullVersion}) => {
   return (
@@ -74,4 +74,4 @@ const Footer = ({isFullVersion}) => {
   )
 }
 
-export default Footer
+export default Footer;

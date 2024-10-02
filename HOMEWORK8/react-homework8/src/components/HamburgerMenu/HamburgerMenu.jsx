@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './HamburgerMenu.scss'
+import './HamburgerMenu.scss';
 
 function HamburgerMenu() {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import Header from '../Header/Header'
-import CatalogNav from '../CatalogNav/CatalogNav'
-import './CatalogPage.scss'
-import Footer from '../Footer/Footer'
-// import GoodsListCatalog from '../GoodsListCatalog/GoodsListCatalog'
-import GoodItem from '../GoodItem/GoodItem'
+import React, { useState } from 'react';
+import Header from '../Header/Header';
+import CatalogNav from '../CatalogNav/CatalogNav';
+import './CatalogPage.scss';
+import Footer from '../Footer/Footer';
+// import GoodsListCatalog from '../GoodsListCatalog/GoodsListCatalog';
+import GoodItem from '../GoodItem/GoodItem';
 
 const CatalogPage = (goods) => {
 
@@ -258,4 +258,4 @@ const CatalogPage = (goods) => {
   )
 }
 
-export default CatalogPage
+export default CatalogPage;

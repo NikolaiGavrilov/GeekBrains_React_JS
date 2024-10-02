@@ -174,15 +174,17 @@ img {
     line-height: 19px;
     letter-spacing: 0em;
     text-align: left;
-    color: #F26376;
+    color: #FFFFFF;
+    background-color: #F26376;
     border-color: #F26376;
-    background-color: #FFFFFF;
     width: 212px;
     height: 48px;
     text-align: center;
 }
 
 .catalogue_button:hover{
-    color: #FFFFFF;
-    background-color: #F26376;
+    color: #F26376;
+    border-color: #F26376;
+    background-color: #FFFFFF;
+    
 }
